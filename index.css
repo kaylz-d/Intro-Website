@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+
+}
+
+body {
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+h2 {
+    margin-top: 0%;
+    margin-bottom: 10px;
+    font-size: 100px;
+    /* VMM site normal size 15px */
+    font-weight: bold;
+
+    color: #704f1e;
+}
+
+.subheading {
+    font-size: 20px;
+}
+
+ol {
+    font-size: larger;
+    text-align: center;
+    /* margins all around */
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    padding: 0%;
+
+}
+
+li {
+    text-align: center;
+    padding-right: 8px;
+    line-height: auto;
+}
+
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: max-content;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.visuals {
+    max-width: 80%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: none;
+    /* background-color: #f0ecdd; */
+    background-image: linear-gradient(#f0ecdd, lavender);
+    border-radius: 20px;
+    border-color: white;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center-left {
+    text-align: left;
+}
+
+.projects-box {
+    font-size: xx-large;
+}
+
+.whatever {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    background-image: linear-gradient(lavender, #f0ecdd);
+    border-bottom: #704f1e;
+    margin-bottom: 50px;
+    /* but it's not vertically aligned :( */
+}
+
+footer {
+    background-image: linear-gradient(lavender, #f0ecdd);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.img-divider {
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+a:hover {
+    border-bottom: solid 3px;
+}
+
+img:hover {
+    opacity: 70%;
+}
+
+.resize {
+    width: 50px;
+    height: auto;
+    padding-right: 15px;
+    overflow: none;
+}
