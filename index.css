@@ -57,8 +57,13 @@ img {
     margin-bottom: 10px;
     padding-left: 3px;
     padding-right: 3px;
-    width: max-content;
+    /*width: max-content;
+    height: 300px;*/
+    /*aspect-ratio: 1/1;
+    object-fit: cover;*/
     height: 300px;
+    width: max-content;
+
     border-radius: 10px;
 }
 
@@ -123,6 +128,7 @@ a {
 
 footer {
     background-image: linear-gradient(lavender, #f0ecdd);
+    /* align-items: center; */
 }
 
 .buttons {
@@ -149,3 +155,80 @@ img:hover {
     padding-right: 15px;
     overflow: none;
 }
+
+button {
+    border-radius: 10px;
+    width: auto;
+    height: 30px;
+}
+
+.buttonAfter {
+    background-color: blue;
+    color: white;
+}
+
+/* playground */
+
+.text-container {
+    display: inline-block;
+    width: 50%;
+    padding: 30px;
+    margin: 20px;
+    background-color: rgb(224, 223, 223);
+}
+
+#whatButton {
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#whatButton:hover {
+    color: white;
+    background-color: black;
+}
+
+.whatAfter {
+    display: none;
+}
+
+.sighAfter {
+    color: black;
+}
+
+.animation-space {
+    width: 20%;
+    height: auto;
+    margin: auto;
+    margin-top: 160px;
+}
+
+@keyframes myCircle {
+    0% {background-color: transparent; bottom: 20px}
+    50% {background-color: blue}
+    100% {background-color: transparent}
+}
+
+.circle {
+    border-radius: 100px;
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-style: solid;
+    border-color: transparent;
+    background-color: grey;
+    margin: 10px;
+    animation: myCircle 3s infinite;
+}
+
+.chevron {
+    --s: 50px; /* control the shape (can be percentage) */
+  
+    width: 220px;
+    aspect-ratio: 5/3;
+    clip-path: polygon(0 0,0 var(--s),50% 100%,100% var(--s),100% 0,50% calc(100% - var(--s)));
+    background-color: grey;
+    transform: scale(0.5);
+    animation: myCircle 3s infinite;
+    margin: 10px;
+    margin-top: 0px;
+    border-radius: 300px;
+  }

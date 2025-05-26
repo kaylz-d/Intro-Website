@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground 2</title>
+</head>
+
+<body>
+
+    <h1 style="font-family: cursive; font-weight: normal; font-size: 50px; margin-bottom: -50px; margin-top: 50px;">
+        Kaylee's CSS Animations Museum</h1>
+        <p id="level" style="color: purple; position: fixed; top: 80px; left: 524px; font-family: cursive; font-size: 50px; font-weight: light">Confidence Level: 1</p>
+
+    <style>
+        html {
+            text-align: center;
+            scroll-behavior: smooth;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            0% {
+                width: 100px;
+                height: 100px;
+            }
+
+            25% {
+                width: 60px;
+                height: 120px;
+            }
+
+            50% {
+                width: 120px;
+                height: 60px;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            /* idk if contents are centered...*/
+            justify-content: space-around;
+        }
+
+        .spring-length {
+            rotate: 270deg;
+            margin-top: 200px;
+            animation: daSpring 1s ease-in-out infinite;
+        }
+
+        .sphere {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            animation: sphereMove 1s ease-in-out infinite;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            border-radius: 100px;
+            border-color: red;
+            border-style: solid;
+            border-width: 3px;
+
+        }
+
+        @keyframes sphereMove {
+
+            /*0% {background-color: red; color: black; font-size: 50%}
+    50% {background-color: blue; color: white; font-size: 100%}
+    100% {background-color: red; color: black; font-size: 50%}*/
+            from {
+                top: 0px
+            }
+
+            50% {
+                top: 200px
+            }
+
+            to {
+                top: 0px
+            }
+        }
+
+        @keyframes daSpring {
+            from {
+                transform: scale(1);
+                margin-bottom: 30px
+            }
+
+            50% {
+                transform: scale(0.25, 2);
+                top: 200px;
+                margin-bottom: 50px
+            }
+
+            to {
+                transform: scale(1);
+                margin-bottom: 30px;
+            }
+        }
+
+        @keyframes heartz {
+            from {
+                color: black;
+            }
+
+            50% {
+                color: red;
+            }
+
+            to {
+                color: black;
+            }
+        }
+
+        .bubble {
+            border-radius: 10px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            padding: 10px;
+            transition: 0.2s;
+        }
+
+        .bubble:hover {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+
+    <div style="scale: 0.85">
+        <div class="flex-container">
+            <div style="width: 50%; height: 50%">
+                <p style="margin-top: 100px; font-weight: bold">Exhibit 1</p>
+                <div class="flex-container" style="flex-direction: column">
+                    <div class="square" style="margin-top: 50px;">
+                        <!-- idk bruh -->
+                    </div>
+                </div>
+                <p>just changing width and height</p>
+            </div>
+
+            <div style="width: 50%; height: 50%;">
+                <p style="margin-top: 100px; font-weight: bold">Exhibit 2</p>
+                <div class="flex-container">
+                    <div class="spring" style="flex-direction: column">
+                        <div class="sphere">
+                            <p style="margin: auto">HAHAHA
+                            <p>
+                        </div>
+                        <div class="spring-length" ;">
+                            <p>This is a spring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- decorations -->
+
+    <img style="position: fixed; left: 350px; top: 460px"
+        src="https://www.shutterstock.com/image-photo/rear-view-casual-group-people-600nw-1923697673.jpg"
+        alt="crowd watching">
+
+    <p class="bubble" id="crowd1" style="position: fixed; left: 1000px; top: 600px">"This is so peak."</p>
+    <p class="bubble" id="crowd2" style="position: fixed; left: 600px; top: 450px">"Amazing."</p>
+    <p class="bubble" id="crowd3" style="position: fixed; left: 800px; top: 450px">"Wow."</p>
+
+
+    <a href="index.html"><img style="position: fixed; right: 100px; top: 100px; width: 100px; height: auto"
+            src="https://torchstar.us/cdn/shop/products/1_676c78f2-99ba-4928-8803-ad136763d6b0.jpg?v=1687909352&width=3000"
+            alt="exit sign"></a>
+
+    <img style="position: fixed; top: 80px; left: 450px; transform: scale(0.3);"
+    src="https://i.pinimg.com/736x/75/dd/80/75dd80f633188c096e9a796e495784b7.jpg" alt="window with nice view">
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var lvl = 1;
+        
+        var crowd1 = false;
+        var crowd2 = false;
+        var crowd3 = false;
+
+
+        var list = ["ദ്ദി ( ᵔ ᗜ ᵔ ) ", "(≧∇≦)/", "٩(^ᗜ^ )و ", "(^_^)", "(@_o)", "( ^^)7", "(+.<)",
+         "\"Showstopping.\"", "\"Literally life-changing.\"", "\"So peak.\"", "\"Breathtaking view.\""];
+        
+        $(document).on("click", "#crowd1", function () {
+            $("#crowd1").text("<3");
+            crowd1 = true;
+
+            if (crowd1 && crowd2 && crowd3) {
+                lvl++;
+                crowd1 = false;
+                crowd2 = false;
+                crowd3 = false;
+                $("#level").text("Confidence Level: " + lvl);
+
+                $("#crowd1").text(list[Math.floor(Math.random() * list.length) + 1]);
+                $("#crowd2").text(list[Math.floor(Math.random() * list.length) + 1]);
+                $("#crowd3").text(list[Math.floor(Math.random() * list.length) + 1]);
+            }
+
+        });
+        $(document).on("click", "#crowd2", function () {
+            $("#crowd2").text("<3");
+            crowd2 = true;
+
+            if (crowd1 && crowd2 && crowd3) {
+                lvl++;
+                crowd1 = false;
+                crowd2 = false;
+                crowd3 = false;
+                $("#level").text("Confidence Level: " + lvl);
+                
+                $("#crowd1").text(list[Math.floor(Math.random() * list.length) + 1]);
+                $("#crowd2").text(list[Math.floor(Math.random() * list.length) + 1]);
+                $("#crowd3").text(list[Math.floor(Math.random() * list.length) + 1]);
+
+            }
+
+        });
+        $(document).on("click", "#crowd3", function () {
+            $("#crowd3").text("<3");
+            crowd3 = true;
+
+            if (crowd1 && crowd2 && crowd3) {
+                lvl++;
+                crowd1 = false;
+                crowd2 = false;
+                crowd3 = false;
+                $("#level").text("Confidence Level: " + lvl);
+
+                $("#crowd1").text(list[Math.floor(Math.random() * list.length) + 1]);
+                $("#crowd2").text(list[Math.floor(Math.random() * list.length) + 1]);
+                $("#crowd3").text(list[Math.floor(Math.random() * list.length) + 1]);
+            }
+
+        });
+
+        // actually...i have no idea how to write a function in jQuery.
+
+    });
+</script>
+
+</html>
